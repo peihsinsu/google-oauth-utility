@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+var p = require('commander');
+var oauth = require('../lib/process');
+
+p.version('0.0.1')
+  .option('-d, --distination <path>', 'Tmp file destination save path')
+  .option('-c, --clientid <id>', 'The client id for oauth2 api')
+  .option('-k, --clientsecret <secret>', 'The client secret for oauth2 api')
+  .option('-u, --redirecturl <url>', 'The redirect url for oauth2 api')
+  .option('-s, --scopes <scopes>', 'The scopes for oauth2 api, seprate by ","')
+  .parse(process.argv);
+
+var opts = {};
+
+if(p.distination) {
+	process.env.TMPPATH = p.distination;
+	opts.tmpPath = p.distination;
+}
+if(p.clientid) process.env.CLIENT_ID = p.clientid;
+if(p.clientsecret) process.env.CLIENT_SECRET = p.clientsecret;
+if(p.redirecturl) process.env.REDIRECT_URL = p.redirecturl;
+
+var scopes = (p.scopes ? p.scopes : []);
+
+oauth.authflow(scopes, opts, function(err, tokens){
+  if(err) log.error(err);
+	console.log(JSON.stringify(tokens));
+});

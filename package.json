@@ -1,0 +1,17 @@
+{
+  "name": "google-oauth-utility",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Su",
+  "license": "ISC",
+  "dependencies": {
+    "googleapis": "~1.0.20",
+    "underscore": "~1.7.0",
+    "nodeutil": "0.0.33",
+    "commander": "~2.5.0"
+  }
+}
