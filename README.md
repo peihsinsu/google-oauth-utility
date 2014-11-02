@@ -12,7 +12,7 @@ Using os path web application account.
 gnutil -d [path-to-tmp-file]
 ```
 
-The os path config file:
+The os path config file(name: .gauth.cfg):
 ```
 {
   "CLIENT_ID":"429************kunu.apps.googleusercontent.com",
