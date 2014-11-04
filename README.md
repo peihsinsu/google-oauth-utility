@@ -5,6 +5,17 @@ google-oauth-utility
 This is a module simplify the Google Oauth2 3 way handshack flow.
 Google's Oauth2 3 way handshack should participate with human, and we can use refresh token for extend the token's life. The module is use for transparent the refresh token exchange another token process. And user just need to do the first time to generate token file.
 
+# Install
+For command line command:
+```
+$ npm install google-oauth-utility -g
+```
+
+For module:
+```
+$ npm install google-oauth-utility
+```
+
 # Generate token file
 
 Using os path web application account.
