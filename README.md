@@ -16,6 +16,15 @@ For module:
 $ npm install google-oauth-utility
 ```
 
+# Before start using it
+
+You must apply a web server application account from google. You can using the link:
+
+https://console.developers.google.com/project/[your-project-id]/apiui/credential
+
+Please note to replace your project id in the link...
+And choice "Create new client id" > "Web application" ... After create the web application account, you must set up your callback url to http://localhost:8888/callback for catching the return token from google.
+
 # Generate token file
 
 Using os path web application account.
